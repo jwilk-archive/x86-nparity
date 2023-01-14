@@ -4,8 +4,9 @@
 
 #include <stdio.h>
 
-static inline unsigned int nparity(unsigned int x)
+static inline unsigned int nparity(unsigned char x)
 {
+    register unsigned int xi = x;
     register unsigned int v;
     __asm__(
         "or %1, %1\n"
