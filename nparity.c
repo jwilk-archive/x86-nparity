@@ -13,7 +13,7 @@ static inline unsigned int nparity(unsigned char x)
         "mov $0, %0\n"
         "setnp %b0\n"
         : "=r" (v)
-        : "r" (x)
+        : "r" (xi)
         : "cc"
     );
     return v;
